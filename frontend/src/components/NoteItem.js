@@ -1,10 +1,21 @@
 import React from 'react';
 
-const NoteItem = (props) => (
-  <li>
-    <h2>Title</h2>
-    <p>Caption...</p>
+const NoteItem = (props) => {
+  
+  return( 
+  <li 
+    key={props.noteId}
+    onClick={()=>props.handleClick(props.noteId)}
+  >
+  <h2>
+    {props.title}
+  </h2>
+  <p>
+    {props.body}
+  </p>
   </li>
-);
+  );
+
+};
 
 export default NoteItem;
